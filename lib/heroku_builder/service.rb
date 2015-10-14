@@ -32,7 +32,12 @@ module HerokuBuilder
       Resource.new.set_resources(name, resources)
     end
 
-    def self.process(environment)
+    def self.deploy(environment)
+      name = config_from_environment(environment)['app']['name']
+      run_deployment(name, environment)
+    end
+
+    def self.apply(environment)
       config = config_from_environment(environment)
       name = config['app']['name']
 
@@ -43,7 +48,7 @@ module HerokuBuilder
       update_env_vars(name, environment)
 
       # deploy code
-      # run_deployment(name, environment)
+      run_deployment(name, environment)
 
       # find or create addons
       update_addons(name, environment)
