@@ -9,15 +9,15 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Jason Vanderhoof']
   spec.email         = ['jvanderhoof (at) google mail']
 
-  spec.summary       = %q{Add the ability to generate multiple heroku application environments and configurations.}
-  spec.description   = %q{Add the ability to generate multiple heroku application environments and configurations.}
+  spec.summary       = %q{Generate and manage multi-environment Heroku application and simple deployment.}
+  spec.description   = %q{Heroku Builder allows for straight forward configuration of your multi (or single) stage Heroku application as well as dead simple deployment.  It uses a YAML configuration to manage a multi-environment configuration, including: configuration variables, resources, add-ons, and git based deployment.}
   spec.homepage      = 'https://github.com/jvanderhoof/heroku_builder.'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'http://rubygems.com'
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
   else
     raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.'
   end
@@ -27,11 +27,11 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'platform-api'
-  spec.add_runtime_dependency 'hashdiff'
-  spec.add_runtime_dependency 'git'
+  spec.add_runtime_dependency 'platform-api', '~> 0.3.0'
+  spec.add_runtime_dependency 'hashdiff', '~> 0.2.2'
+  spec.add_runtime_dependency 'git', '~> 1.2'
 
   spec.add_development_dependency 'bundler', '~> 1.10'
   spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec'
+  spec.add_development_dependency 'rspec', '~> 3.3'
 end
