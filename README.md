@@ -1,4 +1,5 @@
 # Heroku Builder
+[![Gem Version](https://badge.fury.io/rb/heroku_builder.svg)](https://badge.fury.io/rb/heroku_builder) [![Code Climate](https://codeclimate.com/github/jvanderhoof/heroku_builder/badges/gpa.svg)](https://codeclimate.com/github/jvanderhoof/heroku_builder)
 
 Heroku Builder allows for straight forward configuration of your multi (or single) stage Heroku application as well as dead simple deployment.  It uses a YAML configuration to manage a multi-environment configuration, including: configuration variables, resources, add-ons, and git based deployment.
 
