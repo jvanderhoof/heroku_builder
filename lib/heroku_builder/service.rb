@@ -45,16 +45,22 @@ module HerokuBuilder
       update_app(name)
 
       # set env variables
-      update_env_vars(name, environment)
+      unless config['config_vars'].nil? || config['config_vars'].empty?
+        update_env_vars(name, environment)
+      end
 
       # deploy code
       run_deployment(name, environment)
 
       # find or create addons
-      update_addons(name, environment)
+      unless config['addons'].nil? || config['addons'].empty?
+        update_addons(name, environment)
+      end
 
       # find or create resource
-      update_resources(name, environment)
+      unless config['resources'].nil? || config['resources'].empty?
+        update_resources(name, environment)
+      end
     end
   end
 end

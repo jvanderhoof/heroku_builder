@@ -8,10 +8,9 @@ module HerokuBuilder
     def push(name, branch, environment)
       remote_branch = "heroku-#{environment}"
       if remote_exists?(remote_branch)
-        git.add_remote(remote_branch, app(name)['git_url'])
+        git.add_remote(remote_branch, App.new.app(name)['git_url'])
       end
       git.push(remote_branch, "#{branch}:master")
-      puts "remotes: #{git.remotes.map(&:name)}"
     end
 
     def git
