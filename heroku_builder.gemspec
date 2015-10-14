@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = 'heroku_builder'
   spec.version       = HerokuBuilder::VERSION
   spec.authors       = ['Jason Vanderhoof']
-  spec.email         = ['jvanderhoof (at) google mail']
+  spec.email         = ['jvanderhoof (at) google email']
 
   spec.summary       = %q{Generate and manage multi-environment Heroku application and simple deployment.}
   spec.description   = %q{Heroku Builder allows for straight forward configuration of your multi (or single) stage Heroku application as well as dead simple deployment.  It uses a YAML configuration to manage a multi-environment configuration, including: configuration variables, resources, add-ons, and git based deployment.}
-  spec.homepage      = 'https://github.com/jvanderhoof/heroku_builder.'
+  spec.homepage      = 'https://github.com/jvanderhoof/heroku_builder'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+  spec.required_ruby_version = '>= 1.9.3'
 
   spec.add_runtime_dependency 'platform-api', '~> 0.3.0'
   spec.add_runtime_dependency 'hashdiff', '~> 0.2.2'
