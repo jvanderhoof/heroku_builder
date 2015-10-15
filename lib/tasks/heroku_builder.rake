@@ -2,12 +2,6 @@ require 'heroku_builder'
 
 namespace :builder do
   # Utility functions from development. These may be removed...
-  def pretty_print(hsh)
-    hsh.keys.sort.each do |key|
-      puts "#{key}: #{hsh[key].inspect}"
-    end
-  end
-
   def config_file
     'config/heroku.yml'
   end
