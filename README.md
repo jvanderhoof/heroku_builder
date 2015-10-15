@@ -3,6 +3,13 @@
 
 Heroku Builder allows for straight forward configuration of your multi (or single) stage Heroku application as well as dead simple deployment.  It uses a YAML configuration to manage a multi-environment configuration, including: configuration variables, resources, add-ons, and git based deployment.
 
+## Why
+I wrote this gem to solve two particular problems I've found with Heroku.  The first is constructing a new multi-environment application.  Setting up a new app isn't hard in Heroku, but building backstage, staging, and production environments that each contain the same core resources, add-ons, and environment variables always resulted in me forgetting something, and spending time troubleshooting.
+
+The second, and more common, is for managing environment variables through various stages.  We use feature flags and environment variables heavily.  This means a code deployment often requires environment variables to be set for features to work correctly.  With Heroku Builder, a developer can set Heroku Config-vars in the project code.  As the code moves through the various environments, deploying with `rake builder:{environment-name}:apply` will set the Config-vars required for the code changes in addition to deploying code changes.
+
+Treating configuration as code allows for peer review, versioning, and a historic view of an application's history.  It more completely captures the essence of what is required to run an application.
+
 ## Installation
 
 Add this line to your application's Gemfile:
