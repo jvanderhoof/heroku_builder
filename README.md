@@ -12,7 +12,7 @@ Treating configuration as code allows for peer review, versioning, and a histori
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your Rails application's Gemfile:
 
 ```ruby
 gem 'heroku_builder'
@@ -145,20 +145,28 @@ HEROKU_API_KEY=xxxxxxxx-xxxx-xxxx-xxxxxxxxxxxxxxxxx rake builder:staging:apply
 
 ### Running Rake Tasks
 
-Heroku Builder currently has two actions: `apply` and `deploy`.  Apply will:
+Heroku Builder currently has two actions: `apply` and `deploy`.
 
-* Create the application, if it has not been created
-* Set Config-vars (if there are changes)
-* Deploy code (if there are changes)
-* Configure Add-ons (if there are changes)
-* Configure Resources (if there are changes)
+#### Apply
 
-As `apply` only adds or updates when your `heroku.yml` file has changes, it's safe to always use `apply` to deploy code.  Alternatively, you can just run the `deploy` portion.  Deploy will:
+`$ rake builder:staging:apply`
 
-* Switch to the branch for that environment
-* Pull down any remote changes
-* Create a remote for Heroku, if the remote is not present
-* Push to that remote
+1. Creates the application, if it has not been created
+2. Sets Config-vars (if there are changes)
+3. Deploys code (if there are changes)
+4. Configures Add-ons (if there are changes)
+5. Configures Resources (if there are changes)
+
+As `apply` only adds or updates when your `heroku.yml` file has changes, it's safe to always use `apply` to deploy code.  Alternatively, you can just run the `deploy` portion.
+
+#### Deploy 
+
+`$ rake builder:staging:deploy`
+
+1. Switches to the branch for that environment
+2. Pulls down any remote changes
+3. Creates a remote for Heroku, if the remote is not present
+4. Pushes to that remote
 
 The environments defined in your `heroku.yml` file provide scope for the Heroku Builder rake tasks.  If you have the following:
 
@@ -185,7 +193,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/heroku_builder. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jvanderhoof/heroku_builder. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
