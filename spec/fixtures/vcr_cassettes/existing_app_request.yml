@@ -1,0 +1,168 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.heroku.com/apps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Accept-Ranges:
+      - id, name, updated_at
+      Content-Range:
+      - name foxinsight-clinical-trial..test-project-testing
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Oct 2015 13:02:12 GMT
+      Etag:
+      - '"c58f0a27314b98665182ed72d00e34f6"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 23:00:33 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - 4c329b1f-7aae-4c2b-bd17-8dc452a1e516
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.077290589'
+      Content-Length:
+      - '7339'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"archived_at":null,"buildpack_provided_description":"Multipack","build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-09-10T14:19:32Z","id":"add5e7e4-271e-47d9-b535-d873b6c7c465","git_url":"git@heroku.com:foxinsight-clinical-trial.git","maintenance":false,"name":"foxinsight-clinical-trial","owner":{"email":"info@mondorobot.com","id":"c14fcb48-ddcb-46ad-a79a-54433ee47fe3"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-08T17:41:54Z","repo_size":2392369,"slug_size":66057381,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-10-15T21:13:34Z","web_url":"https://foxinsight-clinical-trial.herokuapp.com/","process_tier":"production"},{"archived_at":null,"buildpack_provided_description":"Multipack","build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-08-11T15:08:26Z","id":"40861ccd-6300-4b5a-a448-daffa12520e1","git_url":"git@heroku.com:foxinsight-clinical-trial-dev.git","maintenance":false,"name":"foxinsight-clinical-trial-dev","owner":{"email":"info@mondorobot.com","id":"c14fcb48-ddcb-46ad-a79a-54433ee47fe3"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-15T15:23:04Z","repo_size":2532820,"slug_size":70639296,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-10-15T15:24:04Z","web_url":"https://foxinsight-clinical-trial-dev.herokuapp.com/","process_tier":"free"},{"archived_at":null,"buildpack_provided_description":"Multipack","build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-09-04T21:20:25Z","id":"e3905d07-ada4-46e9-a63f-f3157e3061d0","git_url":"git@heroku.com:foxinsight-clinical-trial-stg.git","maintenance":false,"name":"foxinsight-clinical-trial-stg","owner":{"email":"info@mondorobot.com","id":"c14fcb48-ddcb-46ad-a79a-54433ee47fe3"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-08T17:41:29Z","repo_size":2270920,"slug_size":72748835,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-10-08T17:41:29Z","web_url":"https://foxinsight-clinical-trial-stg.herokuapp.com/","process_tier":"free"},{"archived_at":null,"buildpack_provided_description":"Ruby","build_stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"created_at":"2014-06-11T15:45:02Z","id":"b4f3e688-b34b-45d2-a1b9-25826e66c0d0","git_url":"git@heroku.com:foxinsight-dev.git","maintenance":false,"name":"foxinsight-dev","owner":{"email":"info@mondorobot.com","id":"c14fcb48-ddcb-46ad-a79a-54433ee47fe3"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-16T22:59:33Z","repo_size":34700924,"slug_size":70038104,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2015-10-16T23:00:33Z","web_url":"https://foxinsight-dev.herokuapp.com/","process_tier":"traditional"},{"archived_at":null,"buildpack_provided_description":"Ruby","build_stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"created_at":"2014-05-07T16:45:46Z","id":"10fa347f-f1d3-49c9-b6dd-a75132ee7656","git_url":"git@heroku.com:foxinsight-staging.git","maintenance":false,"name":"foxinsight-staging","owner":{"email":"info@mondorobot.com","id":"c14fcb48-ddcb-46ad-a79a-54433ee47fe3"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-07T15:35:19Z","repo_size":35751536,"slug_size":68327145,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2015-10-07T15:36:20Z","web_url":"https://foxinsight-staging.herokuapp.com/","process_tier":"traditional"},{"archived_at":null,"buildpack_provided_description":"Ruby","build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-10-12T16:36:21Z","id":"7407d628-284d-4b19-ba37-0da978713a5c","git_url":"git@heroku.com:hound-jason.git","maintenance":false,"name":"hound-jason","owner":{"email":"jvanderhoof@gmail.com","id":"12a25a2d-d494-4aa2-8ce6-55e505da593e"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-16T20:02:01Z","repo_size":2794219,"slug_size":42293997,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-10-16T20:02:01Z","web_url":"https://hound-jason.herokuapp.com/","process_tier":"free"},{"archived_at":null,"buildpack_provided_description":"Node.js","build_stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"created_at":"2014-08-07T06:00:07Z","id":"9ac82182-3969-4f02-83f0-4cfb68d05dfd","git_url":"git@heroku.com:mondobot.git","maintenance":false,"name":"mondobot","owner":{"email":"info@mondorobot.com","id":"c14fcb48-ddcb-46ad-a79a-54433ee47fe3"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-07T21:35:57Z","repo_size":120859,"slug_size":12123247,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2015-10-07T21:36:58Z","web_url":"https://mondobot.herokuapp.com/","process_tier":"traditional"},{"archived_at":null,"buildpack_provided_description":"Multipack","build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-09-23T21:24:12Z","id":"f6cf014e-a04b-4024-8ae8-e5e7ac431c88","git_url":"git@heroku.com:mondo-hound.git","maintenance":false,"name":"mondo-hound","owner":{"email":"jvanderhoof@gmail.com","id":"12a25a2d-d494-4aa2-8ce6-55e505da593e"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-12T16:53:57Z","repo_size":8305347,"slug_size":41558683,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-10-12T16:53:57Z","web_url":"https://mondo-hound.herokuapp.com/","process_tier":"free"},{"archived_at":null,"buildpack_provided_description":"Ruby","build_stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"created_at":"2013-08-08T23:24:54Z","id":"6a99357e-25e5-43cc-8137-f19989bb7a49","git_url":"git@heroku.com:pcrt-web-1781.git","maintenance":false,"name":"pcrt-web-1781","owner":{"email":"skeating@michaeljfox.org","id":"68a7ade1-56e6-40c5-bd5b-b0cb58ea4583"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-07T17:15:09Z","repo_size":32761171,"slug_size":68353945,"stack":{"id":"7e04461d-ec81-4bdd-8b37-b69b320a9f83","name":"cedar"},"updated_at":"2015-10-07T17:16:10Z","web_url":"https://pcrt-web-1781.herokuapp.com/","process_tier":"traditional"},{"archived_at":null,"buildpack_provided_description":null,"build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-05-25T19:53:42Z","id":"6df96431-bb4c-4a2a-ad39-4865801cca6b","git_url":"git@heroku.com:test-project-testing.git","maintenance":false,"name":"test-project-testing","owner":{"email":"jvanderhoof@gmail.com","id":"12a25a2d-d494-4aa2-8ce6-55e505da593e"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-05-25T19:53:43Z","repo_size":null,"slug_size":null,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-05-25T19:53:43Z","web_url":"https://test-project-testing.herokuapp.com/","process_tier":"traditional"}]'
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 13:02:12 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Oct 2015 13:11:37 GMT
+      Etag:
+      - '"a0b8bf08c9f23d518b39a8bb3c032172"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 20:02:01 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - 86c49ff1-9bc0-4fca-bdfd-35d2316e9dc0
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.072690421'
+      Content-Length:
+      - '710'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"archived_at":null,"buildpack_provided_description":"Ruby","build_stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"created_at":"2015-10-12T16:36:21Z","id":"7407d628-284d-4b19-ba37-0da978713a5c","git_url":"git@heroku.com:hound-jason.git","maintenance":false,"name":"hound-jason","owner":{"email":"jvanderhoof@gmail.com","id":"12a25a2d-d494-4aa2-8ce6-55e505da593e"},"region":{"id":"59accabd-516d-4f0e-83e6-6e3757701145","name":"us"},"released_at":"2015-10-16T20:02:01Z","repo_size":2794219,"slug_size":42293997,"stack":{"id":"f9f9cbd7-2970-41ef-8db5-3df7123b041f","name":"cedar-14"},"updated_at":"2015-10-16T20:02:01Z","web_url":"https://hound-jason.herokuapp.com/","process_tier":"free"}'
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 13:11:37 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"c58f0a27314b98665182ed72d00e34f6"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Date:
+      - Mon, 19 Oct 2015 15:43:37 GMT
+      Etag:
+      - '"c58f0a27314b98665182ed72d00e34f6"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 23:00:33 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - 44d264a2-147f-4d09-8be3-097f3eeddda4
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.056526636'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 15:43:36 GMT
+recorded_with: VCR 2.9.3

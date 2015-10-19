@@ -5,12 +5,16 @@ module HerokuBuilder
     end
 
     def find_or_create_app(name)
-      return if app_exists?(name)
-      conn.app.create(name: name, region: 'us', stack: 'cedar')
+      return app(name) if app_exists?(name)
+      conn.app.create('name' => name, 'region' => 'us', 'stack' => 'cedar-14')
     end
 
     def app(name)
-      @app ||= conn.app.info(name)
+      if app_exists?(name)
+        conn.app.info(name)
+      else
+        {}
+      end
     end
   end
 end

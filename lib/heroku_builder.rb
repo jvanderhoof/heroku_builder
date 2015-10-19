@@ -1,5 +1,6 @@
 require 'platform-api'
 require 'git'
+require 'hashdiff'
 
 require 'heroku_builder/version'
 require 'heroku_builder/base'

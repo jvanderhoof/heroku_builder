@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/foo-bar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 403
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Oct 2015 13:14:22 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - 9cd5fc87-e511-46fe-a9b1-cb584c81ad7c
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 403 Forbidden
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.085604725'
+      Content-Length:
+      - '73'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"id":"forbidden","message":"You do not have access to the app foo-bar."}'
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 13:14:22 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/asdkfjaslkfjslakjflskj
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 19 Oct 2015 13:14:55 GMT
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4498'
+      Request-Id:
+      - 732857d0-0687-4a74-896e-0f74398c885d
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 404 Not Found
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.052084731'
+      Content-Length:
+      - '71'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"resource":"app","id":"not_found","message":"Couldn''t find that app."}'
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 13:14:55 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"c58f0a27314b98665182ed72d00e34f6"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Date:
+      - Mon, 19 Oct 2015 13:16:50 GMT
+      Etag:
+      - '"c58f0a27314b98665182ed72d00e34f6"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 23:00:33 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - c2d84f0b-fff8-478b-b929-7e5e2db33f15
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.05580602'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 19 Oct 2015 13:16:50 GMT
+recorded_with: VCR 2.9.3

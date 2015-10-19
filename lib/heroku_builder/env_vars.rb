@@ -1,7 +1,7 @@
 # ENV variables
 module HerokuBuilder
   class EnvVars < Base
-    def config_vars(name)
+    def get_config_vars(name)
       @config_vars ||= conn.config_var.info(name)
     end
 
@@ -21,7 +21,7 @@ module HerokuBuilder
     end
 
     def config_env_changes(name, config_vars)
-      diff_config_vars(config_vars(name), config_vars)
+      diff_config_vars(get_config_vars(name), config_vars)
     end
   end
 end

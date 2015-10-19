@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.heroku.com/apps/hound-jason/config-vars
+    body:
+      encoding: UTF-8
+      string: '{"FOO":"bar"}'
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 16 Oct 2015 15:14:13 GMT
+      Etag:
+      - '"7ca3207cc70a52d82dcbf1513047ab4f"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 13:25:03 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - f6125553-8966-4d42-b9da-167a4dac33a2
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.187666588'
+      Content-Length:
+      - '610'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"HOUND_GITHUB_TOKEN":"1708861cd7686dc2ebd7ff7ccdbbcbc45e3b2861","LANG":"en_US.UTF-8","RAILS_ENV":"production","RACK_ENV":"production","SECRET_KEY_BASE":"4de9d4c745d22916fa600f065d05863afbec68eb8db900dd82992672ec8b8c6ee85b14c37f71278f938e9bd8674a6783a8e5d66279f5ef2701576007736f6d97","RAILS_SERVE_STATIC_FILES":"enabled","DATABASE_URL":"postgres://gcdxqsbncbfgvp:0Y8kpsmNLvLOH3LF25RWWjfIGp@ec2-54-204-6-113.compute-1.amazonaws.com:5432/d1loj0hphi9dg4","PAPERTRAIL_API_TOKEN":"6zfyJTGmowkizdN39Xag","REDIS_URL":"redis://h:p715jb2svojmgk52lh9rookdooh@ec2-54-83-207-141.compute-1.amazonaws.com:26839","FOO":"bar"}'
+    http_version: 
+  recorded_at: Fri, 16 Oct 2015 15:14:15 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/config-vars
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 16 Oct 2015 15:14:14 GMT
+      Etag:
+      - '"5879aa8499a159f5b5f6b58c0fea2b8f"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 15:14:13 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read-protected write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4498'
+      Request-Id:
+      - cff89a6c-b8ca-4d27-bb1d-fed6b2f4830b
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.079386802'
+      Content-Length:
+      - '610'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"HOUND_GITHUB_TOKEN":"1708861cd7686dc2ebd7ff7ccdbbcbc45e3b2861","LANG":"en_US.UTF-8","RAILS_ENV":"production","RACK_ENV":"production","SECRET_KEY_BASE":"4de9d4c745d22916fa600f065d05863afbec68eb8db900dd82992672ec8b8c6ee85b14c37f71278f938e9bd8674a6783a8e5d66279f5ef2701576007736f6d97","RAILS_SERVE_STATIC_FILES":"enabled","DATABASE_URL":"postgres://gcdxqsbncbfgvp:0Y8kpsmNLvLOH3LF25RWWjfIGp@ec2-54-204-6-113.compute-1.amazonaws.com:5432/d1loj0hphi9dg4","PAPERTRAIL_API_TOKEN":"6zfyJTGmowkizdN39Xag","REDIS_URL":"redis://h:p715jb2svojmgk52lh9rookdooh@ec2-54-83-207-141.compute-1.amazonaws.com:26839","FOO":"bar"}'
+    http_version: 
+  recorded_at: Fri, 16 Oct 2015 15:14:16 GMT
+recorded_with: VCR 2.9.3
