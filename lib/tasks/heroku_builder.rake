@@ -18,11 +18,6 @@ namespace :builder do
           HerokuBuilder::Service.deploy(env)
         end
 
-        # task :plan do
-        #   changes('backstage').each do |change|
-        #     puts change
-        #   end
-        # end
       end
     end
   end
@@ -38,9 +33,11 @@ namespace :builder do
       'app' => {
         'name' => 'my-heroku-app-name',
         'git_repo' =>  'git@github.com:foo/my-heroku-app-name',
-        'git_branch' =>  'master'
+        'git_branch' =>  'master',
       },
-      'config_vars' =>  [],
+      'config_vars' =>  [
+        'BUILDPACK_URL' => 'https://github.com/ddollar/heroku-buildpack-multi.git'
+      ],
       'addons' =>  [],
       'resources' =>  {
         'web' =>  {

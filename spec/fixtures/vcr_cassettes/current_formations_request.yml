@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"a0b8bf08c9f23d518b39a8bb3c032172"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Date:
+      - Wed, 21 Oct 2015 12:45:01 GMT
+      Etag:
+      - '"a0b8bf08c9f23d518b39a8bb3c032172"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 20:02:01 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - b012c51e-75e2-4ab9-a23a-36a20fd85b5c
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.062858786'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 12:45:01 GMT
+recorded_with: VCR 2.9.3

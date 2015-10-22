@@ -1,0 +1,229 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/addons
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Accept-Ranges:
+      - id, name
+      Cache-Control:
+      - private, no-cache
+      Content-Expansion:
+      - addon_service, plan
+      Content-Range:
+      - name papertrail-corrugated-6430..scheduler-shapely-7160
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 22 Oct 2015 12:43:51 GMT
+      Etag:
+      - '"a1fa02399ced8da18842b34e766446a3"'
+      Last-Modified:
+      - Mon, 12 Oct 2015 16:38:19 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - 5881f949-0844-48e6-9d21-a50bf255194f
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.097864686'
+      Content-Length:
+      - '2189'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"config_vars":["PAPERTRAIL_API_TOKEN"],"created_at":"2015-10-12T16:38:10Z","id":"0500dbce-d01f-41a8-a2b9-22a458733850","name":"papertrail-corrugated-6430","addon_service":{"id":"f6f28cb5-78ad-4ec7-896d-16462b8202fd","name":"papertrail"},"plan":{"id":"75e5e5d9-e71c-4693-818f-db1de34d761b","name":"papertrail:choklad"},"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"provider_id":"130987323","updated_at":"2015-10-12T16:38:13Z","web_url":"https://addons-sso.heroku.com/apps/hound-jason/addons/0500dbce-d01f-41a8-a2b9-22a458733850"},{"config_vars":["DATABASE_URL"],"created_at":"2015-10-12T16:38:08Z","id":"9dbb3ecd-46b7-44f0-8cff-31185a66d9a1","name":"postgresql-closed-6289","addon_service":{"id":"6c67493d-8fc2-4cd4-9161-4f1ec11cbe69","name":"heroku-postgresql"},"plan":{"id":"062a1cc7-f79f-404c-9f91-135f70175577","name":"heroku-postgresql:hobby-dev"},"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"provider_id":"9764776","updated_at":"2015-10-12T16:38:08Z","web_url":"https://postgres.heroku.com/discover?hid=resource11428967@heroku.com"},{"config_vars":["REDIS_URL"],"created_at":"2015-10-12T16:38:15Z","id":"1074a1aa-54a3-4f1f-9950-25eeee171e96","name":"redis-slippery-3420","addon_service":{"id":"5bbf672c-07f6-49c2-9c16-f1dcb96784db","name":"heroku-redis"},"plan":{"id":"67756275-86b8-4edc-80c5-d543f9df7d44","name":"heroku-redis:hobby-dev"},"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"provider_id":"resource11428969@heroku.com","updated_at":"2015-10-12T16:38:17Z","web_url":"https://addons-sso.heroku.com/apps/hound-jason/addons/1074a1aa-54a3-4f1f-9950-25eeee171e96"},{"config_vars":[],"created_at":"2015-10-12T16:38:18Z","id":"d1a7c2e0-52c4-4a92-be14-c69a76edb83f","name":"scheduler-shapely-7160","addon_service":{"id":"3342342e-c3d3-40b9-a839-a751c1dd89bb","name":"scheduler"},"plan":{"id":"86fed9d0-eccc-4007-9459-f807ceadf7a3","name":"scheduler:standard"},"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"provider_id":"131942","updated_at":"2015-10-12T16:38:19Z","web_url":"https://addons-sso.heroku.com/apps/hound-jason/addons/d1a7c2e0-52c4-4a92-be14-c69a76edb83f"}]'
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 12:43:52 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/addons
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"a1fa02399ced8da18842b34e766446a3"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Date:
+      - Thu, 22 Oct 2015 12:43:51 GMT
+      Etag:
+      - '"a1fa02399ced8da18842b34e766446a3"'
+      Last-Modified:
+      - Mon, 12 Oct 2015 16:38:19 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4498'
+      Request-Id:
+      - b7e766ae-a83a-4488-98b6-a6776de782db
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.055878193'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 12:43:53 GMT
+- request:
+    method: post
+    uri: https://api.heroku.com/apps/hound-jason/addons
+    body:
+      encoding: UTF-8
+      string: '{"plan":"newrelic"}'
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Expansion:
+      - addon_service, plan
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 22 Oct 2015 12:48:14 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - f33f8241-bf6b-4f58-973a-82b92c283a7b
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 201 Created
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '1.946788352'
+      Content-Length:
+      - '560'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"config_vars":["NEW_RELIC_LICENSE_KEY","NEW_RELIC_LOG"],"created_at":"2015-10-22T12:48:12Z","id":"b51e3d0d-98bb-4f3d-ab18-146029065ddf","name":"newrelic-lively-8957","addon_service":{"id":"242de9a1-6b5d-4b98-9c13-b03ade5e45af","name":"newrelic"},"plan":{"id":"ea326f5a-9557-434e-8e8b-0646222858e3","name":"newrelic:wayne"},"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"provider_id":"1123439","updated_at":"2015-10-22T12:48:14Z","web_url":"https://addons-sso.heroku.com/apps/hound-jason/addons/b51e3d0d-98bb-4f3d-ab18-146029065ddf"}'
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 12:48:16 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/addons
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"a1fa02399ced8da18842b34e766446a3"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Date:
+      - Thu, 22 Oct 2015 13:12:25 GMT
+      Etag:
+      - '"a1fa02399ced8da18842b34e766446a3"'
+      Last-Modified:
+      - Mon, 12 Oct 2015 16:38:19 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - 3039cb31-fc8c-4119-94a8-18789540c45e
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.050958967'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 13:12:26 GMT
+recorded_with: VCR 2.9.3

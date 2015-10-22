@@ -1,0 +1,348 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"a0b8bf08c9f23d518b39a8bb3c032172"'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 22 Oct 2015 15:06:37 GMT
+      Etag:
+      - '"6df6f72931ef5225491954e5c746b508"'
+      Last-Modified:
+      - Thu, 22 Oct 2015 12:55:40 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - df785fbf-05db-4dd8-9965-07409b03030a
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.083900891'
+      Content-Length:
+      - '1106'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"env
+        QUEUE=high,medium,low bundle exec rake resque:work","created_at":"2015-10-12T16:38:09Z","id":"94e0ae0a-d002-4510-80cb-70c181ecd0fa","type":"worker","quantity":1,"size":"Free","updated_at":"2015-10-12T17:13:54Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec puma -C config/puma.rb","created_at":"2015-10-12T16:38:09Z","id":"8d769e62-13ef-45b7-b312-910a23aae891","type":"web","quantity":1,"size":"Free","updated_at":"2015-10-12T16:38:09Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bin/rails
+        console","created_at":"2015-10-12T16:38:09Z","id":"e84fc0ce-5fa3-4df5-a537-354e13cc6d1b","type":"console","quantity":0,"size":"Free","updated_at":"2015-10-12T16:38:09Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec rake","created_at":"2015-10-12T16:38:09Z","id":"0dd91296-e99f-411c-8fdc-18bb3c68938a","type":"rake","quantity":0,"size":"Free","updated_at":"2015-10-12T16:38:09Z"}]'
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 15:06:38 GMT
+- request:
+    method: patch
+    uri: https://api.heroku.com/apps/hound-jason/formation/web
+    body:
+      encoding: UTF-8
+      string: '{"size":"Free","quantity":0}'
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 22 Oct 2015 15:06:38 GMT
+      Etag:
+      - '"6df6f72931ef5225491954e5c746b508"'
+      Last-Modified:
+      - Thu, 22 Oct 2015 12:55:40 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4498'
+      Request-Id:
+      - 56c1407b-990f-4ca4-a1c6-06b183de5de9
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.139937143'
+      Content-Length:
+      - '277'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec puma -C config/puma.rb","created_at":"2015-10-12T16:38:09Z","id":"8d769e62-13ef-45b7-b312-910a23aae891","type":"web","quantity":0,"size":"Free","updated_at":"2015-10-22T15:06:37Z"}'
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 15:06:39 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"6df6f72931ef5225491954e5c746b508"'
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 22 Oct 2015 15:06:38 GMT
+      Etag:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+      Last-Modified:
+      - Thu, 22 Oct 2015 15:06:37 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4497'
+      Request-Id:
+      - 521219c9-ff74-4e65-ab2e-9507085dfc3c
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.060336093'
+      Content-Length:
+      - '1106'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"env
+        QUEUE=high,medium,low bundle exec rake resque:work","created_at":"2015-10-12T16:38:09Z","id":"94e0ae0a-d002-4510-80cb-70c181ecd0fa","type":"worker","quantity":1,"size":"Free","updated_at":"2015-10-12T17:13:54Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec puma -C config/puma.rb","created_at":"2015-10-12T16:38:09Z","id":"8d769e62-13ef-45b7-b312-910a23aae891","type":"web","quantity":0,"size":"Free","updated_at":"2015-10-22T15:06:37Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bin/rails
+        console","created_at":"2015-10-12T16:38:09Z","id":"e84fc0ce-5fa3-4df5-a537-354e13cc6d1b","type":"console","quantity":0,"size":"Free","updated_at":"2015-10-12T16:38:09Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec rake","created_at":"2015-10-12T16:38:09Z","id":"0dd91296-e99f-411c-8fdc-18bb3c68938a","type":"rake","quantity":0,"size":"Free","updated_at":"2015-10-12T16:38:09Z"}]'
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 15:06:39 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Date:
+      - Thu, 22 Oct 2015 15:08:17 GMT
+      Etag:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+      Last-Modified:
+      - Thu, 22 Oct 2015 15:06:37 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - d4a7dee5-fc37-4cae-9ec3-3ac017773905
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.063792711'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 15:08:19 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Date:
+      - Thu, 22 Oct 2015 15:08:32 GMT
+      Etag:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+      Last-Modified:
+      - Thu, 22 Oct 2015 15:06:37 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4498'
+      Request-Id:
+      - 8dc311b1-33e6-45b8-a6bd-396a206633c5
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.053900757'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 15:08:33 GMT
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+      If-None-Match:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+  response:
+    status:
+      code: 304
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Date:
+      - Thu, 22 Oct 2015 15:08:56 GMT
+      Etag:
+      - '"126d7ea5ce5610fdfa8d3ffc51ab8fec"'
+      Last-Modified:
+      - Thu, 22 Oct 2015 15:06:37 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - c88549a1-c8a5-44ef-8b6a-1d25afac5ccc
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 304 Not Modified
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.048085105'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 22 Oct 2015 15:08:58 GMT
+recorded_with: VCR 2.9.3

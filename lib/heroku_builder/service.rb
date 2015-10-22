@@ -14,7 +14,7 @@ module HerokuBuilder
 
     def self.update_env_vars(name, environment)
       env_vars = config_from_environment(environment)['config_vars']
-      EnvVars.new.set_config_vars(name, env_vars)
+      EnvVar.new.set_config_vars(name, env_vars)
     end
 
     def self.run_deployment(name, environment)
@@ -24,7 +24,7 @@ module HerokuBuilder
 
     def self.update_addons(name, environment)
       addons = config_from_environment(environment)['addons']
-      AddOns.new.set_addons(name, addons)
+      AddOn.new.set_addons(name, addons)
     end
 
     def self.update_resources(name, environment)

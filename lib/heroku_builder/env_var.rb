@@ -1,6 +1,6 @@
 # ENV variables
 module HerokuBuilder
-  class EnvVars < Base
+  class EnvVar < Base
     def get_config_vars(name)
       @config_vars ||= conn.config_var.info(name)
     end

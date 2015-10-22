@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.heroku.com/apps/hound-jason/formation
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.45.4
+      Accept:
+      - application/vnd.heroku+json; version=3
+      Authorization:
+      - Bearer e823238d-2a1a-4393-aaf0-452b58bcc560
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Cache-Control:
+      - private, no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 21 Oct 2015 12:44:25 GMT
+      Etag:
+      - '"a0b8bf08c9f23d518b39a8bb3c032172"'
+      Last-Modified:
+      - Fri, 16 Oct 2015 20:02:01 GMT
+      Oauth-Scope:
+      - global
+      Oauth-Scope-Accepted:
+      - global read read-protected write write-protected
+      Ratelimit-Multiplier:
+      - '1'
+      Ratelimit-Remaining:
+      - '4499'
+      Request-Id:
+      - ce8b1075-1c59-4fbb-beb1-daa22729da06
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.081194901'
+      Content-Length:
+      - '1106'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '[{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"env
+        QUEUE=high,medium,low bundle exec rake resque:work","created_at":"2015-10-12T16:38:09Z","id":"94e0ae0a-d002-4510-80cb-70c181ecd0fa","type":"worker","quantity":1,"size":"Free","updated_at":"2015-10-12T17:13:54Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec puma -C config/puma.rb","created_at":"2015-10-12T16:38:09Z","id":"8d769e62-13ef-45b7-b312-910a23aae891","type":"web","quantity":1,"size":"Free","updated_at":"2015-10-12T16:38:09Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bin/rails
+        console","created_at":"2015-10-12T16:38:09Z","id":"e84fc0ce-5fa3-4df5-a537-354e13cc6d1b","type":"console","quantity":0,"size":"Free","updated_at":"2015-10-12T16:38:09Z"},{"app":{"id":"7407d628-284d-4b19-ba37-0da978713a5c","name":"hound-jason"},"command":"bundle
+        exec rake","created_at":"2015-10-12T16:38:09Z","id":"0dd91296-e99f-411c-8fdc-18bb3c68938a","type":"rake","quantity":0,"size":"Free","updated_at":"2015-10-12T16:38:09Z"}]'
+    http_version: 
+  recorded_at: Wed, 21 Oct 2015 12:44:25 GMT
+recorded_with: VCR 2.9.3

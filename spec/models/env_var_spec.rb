@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe HerokuBuilder::EnvVars do
-  let(:env_vars) { HerokuBuilder::EnvVars.new }
+describe HerokuBuilder::EnvVar do
+  let(:env_vars) { HerokuBuilder::EnvVar.new }
   let(:name) { 'hound-jason' }
 
   after do
