@@ -44,7 +44,6 @@ When you open `config/heroku.yml`, you'll see something like this:
 staging:
   app:
     name: my-heroku-app-name-staging
-    git_repo: git@github.com:foo/my-heroku-app-name
     git_branch: staging
   config_vars: []
   addons: []
@@ -55,7 +54,6 @@ staging:
 production:
   app:
     name: my-heroku-app-name
-    git_repo: git@github.com:foo/my-heroku-app-name
     git_branch: master
   config_vars: []
   addons: []
@@ -76,7 +74,6 @@ Would apply the configuration for the `staging` environment.
 
 The `app` sections provides settings particular to the application.
 * `name` - the Heroku application name.  The application will be created unless it already exists on Heroku.
-* `git_repo` - the repository the project code is kept in.  Code will be checked out from this repository as part of the deploy process, so you'll need at least read permission on the repo to deploy code to Heroku.
 * `git_branch` - the branch of the `git_repo` repo that you wish to deploy from.
 
 The `config_vars` setting allows you to set Config Vars for a particular environment.  These can be applied as follows:
@@ -159,7 +156,7 @@ Heroku Builder currently has two actions: `apply` and `deploy`.
 
 As `apply` only adds or updates when your `heroku.yml` file has changes, it's safe to always use `apply` to deploy code.  Alternatively, you can just run the `deploy` portion.
 
-#### Deploy 
+#### Deploy
 
 `$ rake builder:staging:deploy`
 
