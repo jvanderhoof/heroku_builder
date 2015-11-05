@@ -4,10 +4,6 @@ describe HerokuBuilder::EnvVar do
   let(:env_vars) { HerokuBuilder::EnvVar.new }
   let(:name) { 'hound-jason' }
 
-  after do
-    VCR.eject_cassette
-  end
-
   describe '.set_config_vars' do
     before do
       VCR.insert_cassette 'set_config_vars_request', record: :new_episodes

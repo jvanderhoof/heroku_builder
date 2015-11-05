@@ -2,12 +2,12 @@
 module HerokuBuilder
   class Deployment < Base
     def remote_exists?(branch)
-      git.remotes.detect { |remote| remote.name == branch }.nil?
+      git.remotes.any? { |remote| remote.name == branch }
     end
 
     def push(name, branch, environment)
       remote_branch = "heroku-#{environment}"
-      if remote_exists?(remote_branch)
+      unless remote_exists?(remote_branch)
         git.add_remote(remote_branch, App.new.app(name)['git_url'])
       end
       git.push(remote_branch, "#{branch}:master", force: true)

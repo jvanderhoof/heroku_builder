@@ -32,7 +32,6 @@ namespace :builder do
     env_config = {
       'app' => {
         'name' => 'my-heroku-app-name',
-        'git_repo' =>  'git@github.com:foo/my-heroku-app-name',
         'git_branch' =>  'master',
       },
       'config_vars' =>  [

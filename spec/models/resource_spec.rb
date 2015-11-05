@@ -4,10 +4,6 @@ describe HerokuBuilder::Resource do
   let(:resource) { HerokuBuilder::Resource.new }
   let(:name) { 'hound-jason' }
 
-  after do
-    VCR.eject_cassette
-  end
-
   describe '.get_formation' do
     describe 'not present' do
     before do

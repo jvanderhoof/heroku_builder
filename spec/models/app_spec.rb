@@ -8,6 +8,7 @@ describe HerokuBuilder::App do
     VCR.eject_cassette
   end
 
+
   describe '.app_exists?' do
     before do
       VCR.insert_cassette 'existing_app_request', record: :new_episodes
