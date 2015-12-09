@@ -6,7 +6,15 @@ module HerokuBuilder
     end
 
     def set_config_vars(name, config_vars)
-      conn.config_var.update(name, config_vars)
+      env_vars = config_vars
+      if config_vars.is_a? Array
+        env_vars = {}.tap do |hsh|
+          config_vars.each do |args|
+            hsh.merge!(args)
+          end
+        end
+      end
+      conn.config_var.update(name, env_vars)
     end
 
     def diff_config_vars(current, proposed)
