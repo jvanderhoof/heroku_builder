@@ -26,6 +26,29 @@ Or install it yourself as:
 
     $ gem install heroku_builder
 
+### Sinatra
+
+Sinatra needs some extra configuration to ensure the rake tasks in the gem are available in your application. First, to the top of the `Rakefile` file, load your environment variables:
+
+```ruby
+require 'dotenv'
+Dotenv.load
+```
+
+Next, add the following after Rake has been required:
+
+```ruby
+require 'bundler'
+Bundler.setup
+Bundler.load.specs.each do |spec|
+  spec.load_paths.each do  |load_path|
+    Dir.glob("#{load_path}/**/*.rake").each do |rake_file|
+      load rake_file
+    end
+  end
+end
+```
+
 ## Usage
 
 ### Getting Started
