@@ -49,13 +49,13 @@ module HerokuBuilder
         update_env_vars(name, environment)
       end
 
-      # deploy code
-      run_deployment(name, environment)
-
       # find or create addons
       unless config['addons'].nil? || config['addons'].empty?
         update_addons(name, environment)
       end
+
+      # deploy code
+      run_deployment(name, environment)
 
       # find or create resource
       unless config['resources'].nil? || config['resources'].empty?
