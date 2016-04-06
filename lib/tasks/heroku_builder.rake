@@ -10,6 +10,11 @@ namespace :builder do
   if File.exist?(config_file)
     HerokuBuilder::Service.config_file.keys.each do |env|
       namespace env.to_sym do
+
+        task :configure do
+          HerokuBuilder::Service.configure(env)
+        end
+
         task :apply do
           HerokuBuilder::Service.apply(env)
         end
